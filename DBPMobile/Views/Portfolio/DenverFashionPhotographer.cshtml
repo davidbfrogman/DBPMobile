@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "DenverFashionPhotographer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<DBPMobile.Models.PortfolioImage>
+
+    @foreach(var image in Model)
+    {
+        <img src="@image.ImageLocation" style="border-width:0px;margin:0px 0px 5px 0px;" /><br/>
+    }
+<h2>Fashion Photography Book I</h2>
