@@ -26,7 +26,7 @@ namespace DBPMobile.App_Start
                             .Include("~/Scripts/bootstrap.js")
                             .Include("~/Scripts/masonry.pkgd.min.js")
                             .Include("~/Scripts/imagesloaded.pkgd.min.js")
-                            .Include("~/Scripts/HomePageTiler.js")
+                            .Include("~/Scripts/DBPMobile.js")
                             );
         }
     }
