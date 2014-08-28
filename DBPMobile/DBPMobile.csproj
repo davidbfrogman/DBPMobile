@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\PortfolioImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\PortfolioImageUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -145,19 +146,39 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\carousel.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\kingthings_trypewriter_2-webfont %281%29.woff" />
+    <Content Include="Content\fonts\kingthings_trypewriter_2-webfont %282%29.woff" />
+    <Content Include="Content\fonts\kingthings_trypewriter_2-webfont.eot" />
+    <Content Include="Content\fonts\kingthings_trypewriter_2-webfont.ttf" />
+    <Content Include="Content\fonts\kingthings_trypewriter_2-webfont.woff" />
+    <Content Include="Content\fonts\museo-300.eot" />
+    <Content Include="Content\fonts\museo-500.eot" />
+    <Content Include="Content\fonts\museo-700.eot" />
+    <Content Include="Content\fonts\questrial-bold-webfont %281%29.eot" />
+    <Content Include="Content\fonts\questrial-bold-webfont.eot" />
+    <Content Include="Content\fonts\questrial-bold-webfont.ttf" />
+    <Content Include="Content\fonts\questrial-bold-webfont.woff" />
+    <Content Include="Content\fonts\questrial-regular-webfont.eot" />
+    <Content Include="Content\fonts\questrial-regular-webfont.ttf" />
+    <Content Include="Content\fonts\questrial-regular-webfont.woff" />
+    <Content Include="Content\fonts\raleway.eot" />
+    <Content Include="Content\fonts\raleway.ttf" />
+    <Content Include="Content\fonts\raleway.woff" />
     <Content Include="Content\images\carousel1.jpg" />
     <Content Include="Content\images\carousel2.jpg" />
     <Content Include="Content\images\carousel3.jpg" />
+    <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\Icon1.png" />
     <Content Include="Content\images\Icon2.png" />
     <Content Include="Content\images\Icon3.png" />
+    <Content Include="Content\images\instagram.png" />
+    <Content Include="Content\images\twitter.png" />
     <Content Include="Content\site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\BtJs\affix.js" />
@@ -183,14 +204,15 @@
     <Content Include="Scripts\BtJs\tooltip.js" />
     <Content Include="Scripts\BtJs\transition.js" />
     <Content Include="Scripts\BtJs\uglify.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\DBPMobile.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\HomePageTiler.js" />
+    <Content Include="Scripts\imagesloaded.pkgd.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\masonry.pkgd.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

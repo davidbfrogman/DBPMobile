@@ -23,7 +23,11 @@ namespace DBPMobile.App_Start
             bundles.Add(new ScriptBundle("~/js")
                             .Include("~/Scripts/jquery-{version}.js")
                             .Include("~/Scripts/jquery-ui-{version}.js")
-                            .Include("~/Scripts/bootstrap.js"));
+                            .Include("~/Scripts/bootstrap.js")
+                            .Include("~/Scripts/masonry.pkgd.min.js")
+                            .Include("~/Scripts/imagesloaded.pkgd.min.js")
+                            .Include("~/Scripts/HomePageTiler.js")
+                            );
         }
     }
 }

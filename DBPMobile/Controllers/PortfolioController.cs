@@ -1,4 +1,5 @@
 ﻿using DBPMobile.Models;
+using DBPMobile.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,8 +24,7 @@ namespace DBPMobile.Controllers
         // GET: /Portfolio/DenverFashionPhotographer
         public ActionResult DenverFashionPhotographer()
         {
-
-            return View(GetImages("Fashion"));
+            return View(PortfolioImageUtility.GetImages("Fashion", this.Server, false));
         }
 
         //
@@ -32,22 +32,6 @@ namespace DBPMobile.Controllers
         public ActionResult FashionPhotographerInDenver()
         {
             return View();
-        }
-
-        public List<PortfolioImage> GetImages(string imageDirectory)
-        {
-            DirectoryInfo di = new DirectoryInfo(Server.MapPath(String.Format("~/Content/Portfolio/{0}", imageDirectory)));
-
-            FileInfo[] rgFiles = di.GetFiles("*.jpg");
-            List<FileInfo> files = rgFiles.ToList<FileInfo>();
-
-            List<PortfolioImage> images = new List<PortfolioImage>();
-            foreach (FileInfo fi in files)
-            {
-                PortfolioImage image = new PortfolioImage() { ImageLocation = String.Format("/Content/Portfolio/{0}/{1}", imageDirectory, fi.Name) };
-                images.Add(image);
-            }
-            return images;
         }
     }
 }

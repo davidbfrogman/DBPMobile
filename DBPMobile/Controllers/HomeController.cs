@@ -1,3 +1,4 @@
+using DBPMobile.Utilities;
 using System.Web.Mvc;
 
 namespace DBPMobile.Controllers
@@ -9,7 +10,7 @@ namespace DBPMobile.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(PortfolioImageUtility.GetImages("Masonry", this.Server, true));
         }
 
         public ActionResult About()
