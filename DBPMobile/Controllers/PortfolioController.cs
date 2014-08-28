@@ -24,14 +24,7 @@ namespace DBPMobile.Controllers
         // GET: /Portfolio/DenverFashionPhotographer
         public ActionResult DenverFashionPhotographer()
         {
-            return View(PortfolioImageUtility.GetImages("Fashion", this.Server, false));
-        }
-
-        //
-        // GET: /Portfolio/DenverFashionPhotographer
-        public ActionResult FashionPhotographerInDenver()
-        {
-            return View();
+            return View(PortfolioImageUtility.GetImages(this.Request.QueryString["folder"], this.Server, false));
         }
     }
 }

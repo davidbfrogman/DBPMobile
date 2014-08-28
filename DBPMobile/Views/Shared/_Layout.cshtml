@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head>
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <meta charset="utf-8" />
     <title >@ViewBag.Title</title>
 
@@ -28,16 +28,22 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.MenuLink("Fashion I","DenverFashionPhotographer","Portfolio")</li>
-                            <li>@Html.MenuLink("Fashion II","FashionPhotographerInDenver","Portfolio")</li>
+                            <li>@Html.MenuLink("Fashion I", "DenverFashionPhotographer", "Portfolio", "Fashion")</li>
+                            <li>@Html.MenuLink("Fashion II", "DenverFashionPhotographer", "Portfolio", "Fashion2")</li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Editorial</li>
-                            <li><a href="#">Firestarter</a></li>
-                            <li><a href="#">Star Collector</a></li>
+                            <li>@Html.MenuLink("Firestarter", "DenverFashionPhotographer", "Portfolio", "Editorial/Firestarter")</li>
+                            <li>@Html.MenuLink("Star Collector", "DenverFashionPhotographer", "Portfolio", "Editorial/StarCollector")</li>
+                            <li>@Html.MenuLink("Wanderlust", "DenverFashionPhotographer", "Portfolio", "Editorial/Wanderlust")</li>
+                            <li>@Html.MenuLink("Light Dance", "DenverFashionPhotographer", "Portfolio", "Editorial/LightDance")</li>
+                            <li>@Html.MenuLink("Lindsey Vonn", "DenverFashionPhotographer", "Portfolio", "Editorial/LindseyVonn")</li>
+                            <li>@Html.MenuLink("Milan", "DenverFashionPhotographer", "Portfolio", "Editorial/MilanOnMyLips")</li>
+                            <li>@Html.MenuLink("Can I stay", "DenverFashionPhotographer", "Portfolio", "Editorial/CanIStayAWhile")</li>
+                            <li>@Html.MenuLink("Pale Fire", "DenverFashionPhotographer", "Portfolio", "Editorial/PaleFire")</li>
                             <li class="divider"></li>
-                            <li><a href="#">Portrait</a></li>
-                            <li><a href="#">Engagement</a></li>
-                            <li><a href="#">Band</a></li>
+                            <li>@Html.MenuLink("Portrait", "DenverFashionPhotographer", "Portfolio", "Portraits")</li>
+                            <li>@Html.MenuLink("Engagement", "DenverFashionPhotographer", "Portfolio", "Engagement")</li>
+                            <li>@Html.MenuLink("Band", "DenverFashionPhotographer", "Portfolio", "Band")</li>
                         </ul>
                     </li>
                     <li>@Html.MenuLink("Contact", "Contact", "Home")</li>
@@ -49,7 +55,7 @@
         </div>
     </div>
     @RenderSection("Carousel", false)
-    <div class="container">
+    <div class="container" style="padding:0px 0px 0px 0px;">
         <noscript>
             <div class="alert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -57,23 +63,7 @@
             </div>
         </noscript>
 
-        <div class="row">
-            @if (IsSectionDefined("sidebar"))
-            {
-                <div class="span2">
-                    @RenderSection("sidebar", required: false)
-                </div>
-            }
-
-            <div id="content" @(IsSectionDefined("sidebar") ? Html.Raw("class=span10") : Html.Raw("class=span12"))>
-                @if (IsSectionDefined("featured"))
-                {
-                    <div>
-                        <div class="hero-unit">
-                            @RenderSection("featured", required: false)
-                        </div>
-                    </div>
-                }
+        <div class="row" style="margin:0px 0px 0px 0px;">
                 <div>
                     @RenderBody()
                 </div>

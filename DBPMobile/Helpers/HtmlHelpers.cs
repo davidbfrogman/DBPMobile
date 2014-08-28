@@ -1,3 +1,4 @@
+using System;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
@@ -7,12 +8,17 @@ namespace DBPMobile.Helpers
     {
         public static MvcHtmlString MenuLink(this HtmlHelper htmlHelper, string linkText, string actionName, string controllerName)
         {
+            return MenuLink(htmlHelper, linkText, actionName, controllerName, String.Empty);
+        }
+
+        public static MvcHtmlString MenuLink(this HtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string queryString)
+        {
             var currentAction = htmlHelper.ViewContext.RouteData.GetRequiredString("action");
             var currentController = htmlHelper.ViewContext.RouteData.GetRequiredString("controller");
 
             var builder = new TagBuilder("li")
                               {
-                                  InnerHtml = htmlHelper.ActionLink(linkText, actionName, controllerName).ToHtmlString()
+                                  InnerHtml = htmlHelper.ActionLink(linkText, actionName, controllerName, new { folder = queryString }, null).ToHtmlString()
                               };
 
             if (controllerName == currentController && actionName == currentAction)

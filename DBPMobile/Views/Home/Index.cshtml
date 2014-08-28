@@ -32,10 +32,10 @@
 {
     @Html.Partial("_Carousel")
 }*@
-<div id="divMasonryContainer" class="divMasonryContainer" style="padding-left:0px; padding-right:0px;">
+<div id="divMasonryContainer" class="divMasonryContainer">
     @foreach(var image in Model)
     {
-        <img class="homePageImage" src="@image.ImageLocation" style="border-width:0px;margin:3px 3px 0px 0px;" />
+        <img class="homePageImage" src="@image.ImageLocation" style="border-width:0px;margin:3px 3px 0px 0px;max-width:32%; height:auto;" />
     }
 </div>
 
