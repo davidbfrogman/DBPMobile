@@ -34,3 +34,4 @@ C:\DBPMobile\DBPMobile\bin\System.Web.WebPages.Razor.xml
 C:\DBPMobile\DBPMobile\obj\Debug\DBPMobile.csproj.App.config
 C:\DBPMobile\DBPMobile\obj\Debug\DBPMobile.dll
 C:\DBPMobile\DBPMobile\obj\Debug\DBPMobile.pdb
+C:\DBPMobile\DBPMobile\obj\Debug\DBPMobile.csprojResolveAssemblyReference.cache
