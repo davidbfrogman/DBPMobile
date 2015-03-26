@@ -6201,3 +6201,9 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.divMasonryContainer
+{
+    margin-right:auto;
+    margin-left:auto;
+}

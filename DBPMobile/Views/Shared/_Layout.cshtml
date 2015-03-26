@@ -30,6 +30,7 @@
                         <ul class="dropdown-menu">
                             <li>@Html.MenuLink("Fashion I", "DenverFashionPhotographer", "Portfolio", "Fashion")</li>
                             <li>@Html.MenuLink("Fashion II", "DenverFashionPhotographer", "Portfolio", "Fashion2")</li>
+                            <li>@Html.MenuLink("Headshots", "DenverFashionPhotographer", "Portfolio", "Headshots")</li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Editorial</li>
                             <li>@Html.MenuLink("Firestarter", "DenverFashionPhotographer", "Portfolio", "Editorial/Firestarter")</li>
@@ -41,7 +42,6 @@
                             <li>@Html.MenuLink("Can I stay", "DenverFashionPhotographer", "Portfolio", "Editorial/CanIStayAWhile")</li>
                             <li>@Html.MenuLink("Pale Fire", "DenverFashionPhotographer", "Portfolio", "Editorial/PaleFire")</li>
                             <li class="divider"></li>
-                            <li>@Html.MenuLink("Portrait", "DenverFashionPhotographer", "Portfolio", "Portraits")</li>
                             <li>@Html.MenuLink("Engagement", "DenverFashionPhotographer", "Portfolio", "Engagement")</li>
                             <li>@Html.MenuLink("Band", "DenverFashionPhotographer", "Portfolio", "Band")</li>
                         </ul>
@@ -55,7 +55,7 @@
         </div>
     </div>
     @RenderSection("Carousel", false)
-    <div class="container" style="padding:0px 0px 0px 0px;">
+    <div class="container" style="padding:0px 0px 0px 0px;margin:0px auto 0px auto;">
         <noscript>
             <div class="alert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -63,7 +63,7 @@
             </div>
         </noscript>
 
-        <div class="row" style="margin:0px 0px 0px 0px;">
+        <div class="row" style="margin:0px auto 0px auto;">
                 <div>
                     @RenderBody()
                 </div>

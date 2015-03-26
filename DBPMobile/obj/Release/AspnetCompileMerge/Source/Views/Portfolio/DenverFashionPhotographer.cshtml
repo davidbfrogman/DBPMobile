@@ -6,7 +6,7 @@
 
 @model List<DBPMobile.Models.PortfolioImage>
 
-    @foreach(var image in Model)
+    @foreach (var image in Model)
     {
-        <img src="@image.ImageLocation" style="border-width:0px;margin:0px 0px 5px 0px; max-width:100%; height:auto;" /><br/>
+        <img src="@image.ImageLocation" align="middle" style="border-width:0px;margin-bottom:5px; max-width:100%; height:auto; margin-right:auto; margin-left:auto; display:block;" /><br/>
     }

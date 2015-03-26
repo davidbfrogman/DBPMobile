@@ -11,7 +11,17 @@ namespace DBPMobile.Utilities
     {
         public static List<PortfolioImage> GetImages(string imageDirectory, HttpServerUtilityBase server, bool randomize)
         {
-            DirectoryInfo di = new DirectoryInfo(server.MapPath(String.Format("~/Content/Portfolio/{0}", imageDirectory)));
+            DirectoryInfo di;
+            if (Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["UseLocalImages"]))
+            {
+                di = new DirectoryInfo(server.MapPath(String.Format("~/Content/Portfolio/{0}", imageDirectory)));
+            }
+            else
+            {
+                //if you change hosting, use your main site to figure out this path.  Just change the title text on an image to the path of DI in the main
+                //website(not the mobile one)
+                di = new DirectoryInfo(String.Format("h:\\root\\home\\davidbfrogman-001\\www\\davebrownphotography\\Images\\{0}", imageDirectory));
+            }
 
             FileInfo[] rgFiles = di.GetFiles("*.jpg");
             List<FileInfo> files = rgFiles.ToList<FileInfo>();
@@ -19,7 +29,15 @@ namespace DBPMobile.Utilities
             List<PortfolioImage> images = new List<PortfolioImage>();
             foreach (FileInfo fi in files)
             {
-                PortfolioImage image = new PortfolioImage() { ImageLocation = String.Format("/Content/Portfolio/{0}/{1}", imageDirectory, fi.Name) };
+                PortfolioImage image;
+                if (Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["UseLocalImages"]))
+                {
+                    image = new PortfolioImage() { ImageLocation = String.Format("/Content/Portfolio/{0}/{1}", imageDirectory, fi.Name) };
+                }
+                else
+                {
+                    image = new PortfolioImage() { ImageLocation = String.Format("http://www.davebrownphotography.com/images/{0}/{1}", imageDirectory, fi.Name) };
+                }
                 images.Add(image);
             }
 
